@@ -52,8 +52,8 @@ original code
 
 3. Supported comments around the morph rules: #, /*, //, <!--
  ```
-/* {{morph}}
-{{demo}}:{{demo code}}
+// {{morph}}
+/* {{demo}}:{{demo code}}
 {{trial}}:{{
 trial code
 }} */
