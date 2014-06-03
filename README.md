@@ -4,7 +4,7 @@ CodeMorph
 Script that generates multiple versions on one file according to replacement rules inside of it.
 
 ### How to use
-1. Prepare morph rules is source files
+1. Prepare morph rules in source files
  ```php
  ...
  // {{morph}}
@@ -51,6 +51,15 @@ original code
  ```
 
 3. Supported comments around the morph rules: #, /*, //, <!--
+ ```
+/* {{morph}}
+{{demo}}:{{demo code}}
+{{trial}}:{{
+trial code
+}} */
+original code
+// {{morph}}
+ ```
 
 ### Speed
 To speedup the file parsing, you may create the morph.ini file inside your project root
