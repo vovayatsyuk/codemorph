@@ -311,7 +311,7 @@ class CodeMorph
             $this->_config = parse_ini_file($filename, true);
         } else {
             $this->_config = array(
-                'region_files' => array(
+                'morph_files' => array(
                     'include' => array('*')
                 )
             );
@@ -326,15 +326,15 @@ class CodeMorph
      */
     protected function _isRegionFile($relativePath)
     {
-        if (!empty($this->_config['region_files']['include'])) {
-            $included = $this->_config['region_files']['include'];
+        if (!empty($this->_config['morph_files']['include'])) {
+            $included = $this->_config['morph_files']['include'];
             if (in_array($relativePath, $included)) {
                 return true;
             }
         }
 
-        if (!empty($this->_config['region_files']['exclude'])) {
-            $excluded = $this->_config['region_files']['exclude'];
+        if (!empty($this->_config['morph_files']['exclude'])) {
+            $excluded = $this->_config['morph_files']['exclude'];
             if (in_array($relativePath, $excluded) || in_array('*', $excluded)) {
                 return false;
             }
