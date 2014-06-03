@@ -4,7 +4,7 @@ CodeMorph
 Script that generates multiple versions on one file according to replacement rules inside of it.
 
 ### How to use
-1. Prepare morph rules
+1. Prepare morph rules is source files
  ```php
  ...
  // {{morph}}
@@ -16,12 +16,14 @@ Script that generates multiple versions on one file according to replacement rul
  ```
 
  ```xml
+ ...
  <!-- {{morph}}
  {{demo}}:{{
  <comment>Demo Version</comment>
  }} -->
  <comment>Full Version</comment>
  <!-- {{morph}} -->
+ ...
  ```
 
 2. Run the command:
